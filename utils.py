@@ -1,5 +1,4 @@
 import numpy as np
-import torch
 from multiagent.environment import MultiAgentEnv
 import multiagent.scenarios as scenarios
 import gym_vecenv

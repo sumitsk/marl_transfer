@@ -1,18 +1,15 @@
 import numpy as np
 from multiagent.core import World, Agent, Landmark
 from multiagent.scenario import BaseScenario
-import ipdb
 
 class Scenario(BaseScenario):
-    def __init__(self, num_agents=3, blind_agents=False, shaped_reward=False, 
-                repairing=True, team_spirit=0.5, dist_threshold=0.1, arena_size=1):
+    def __init__(self, num_agents=3, blind_agents=False, shaped_reward=False, dist_threshold=0.1, arena_size=1):
         self.num_agents = num_agents
         self.blind_agents = blind_agents
         self.shaped_reward = shaped_reward
         # once an agent-landmark pair is formed, they are bound to each other
         self.repairing = False
         self.rewards = np.zeros(self.num_agents)
-        self.team_spirit = team_spirit
         self.temp_done = False
         self.dist_threshold = dist_threshold
         self.arena_size = arena_size

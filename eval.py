@@ -5,6 +5,7 @@ from utils import normalize_obs
 from learner import setup_master
 import time
 
+
 def evaluate(args, seed, policies_list, ob_rms=None, render=False, env=None, master=None, render_attn=True):
     """
     RL evaluation: supports eval through training code as well as independently
@@ -27,7 +28,6 @@ def evaluate(args, seed, policies_list, ob_rms=None, render=False, env=None, mas
     master.load_models(policies_list)
     master.set_eval_mode()
 
-    # TODO: make a config file and load these to maintain uniformity 
     num_eval_episodes = args.num_eval_episodes
     all_episode_rewards = np.full((num_eval_episodes, env.n), 0.0)
     per_step_rewards = np.full((num_eval_episodes, env.n), 0.0)
@@ -75,9 +75,8 @@ def evaluate(args, seed, policies_list, ob_rms=None, render=False, env=None, mas
 
         # for simple spread env only
         if args.env_name == 'simple_spread':
-            # final_min_dists.append(np.amin(env.world.dists,0))
             final_min_dists.append(env.world.min_dists)
-        elif args.env_name == 'simple_formation' or args.env_name=='simple_line' or args.env_name=='simple_formation_old':
+        elif args.env_name == 'simple_formation' or args.env_name=='simple_line':
             final_min_dists.append(env.world.dists)
 
         if render:
@@ -97,7 +96,8 @@ if __name__ == '__main__':
     checkpoint = torch.load(args.load_dir, map_location=lambda storage, loc: storage)
     policies_list = checkpoint['models']
     ob_rms = checkpoint['ob_rms']
-    all_episode_rewards, per_step_rewards, final_min_dists, num_success, episode_length = evaluate(args, args.seed, policies_list, ob_rms, args.render, render_attn=args.masking)
+    all_episode_rewards, per_step_rewards, final_min_dists, num_success, episode_length = evaluate(args, args.seed, 
+                    policies_list, ob_rms, args.render, render_attn=args.masking)
     print("Average Per Step Reward {}\nNum Success {}/{} | Av. Episode Length {:.2f})"
             .format(per_step_rewards.mean(0),num_success,args.num_eval_episodes,episode_length))
     if final_min_dists:

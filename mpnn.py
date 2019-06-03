@@ -16,7 +16,7 @@ def weights_init(m):
 
 class MPNN(nn.Module):
     def __init__(self, action_space, num_agents, num_entities, input_size=16, hidden_dim=128, embed_dim=None,
-                 pos_index=12, norm_in=False, nonlin=nn.ReLU, n_heads=1, mask_dist=None, entity_mp=False):
+                 pos_index=2, norm_in=False, nonlin=nn.ReLU, n_heads=1, mask_dist=None, entity_mp=False):
         super().__init__()
 
         self.h_dim = hidden_dim
