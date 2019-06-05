@@ -1,6 +1,6 @@
 # Learning Transferable Cooperative Behavior in Multi-Agent Teams
 
-This is the official repository of the 'Learning Transferable Cooperative Behavior in Multi-Agent Teams' paper. 
+This is the official repository of the 'Learning Transferable Cooperative Behavior in Multi-Agent Teams' paper available at https://arxiv.org/abs/1906.01202. 
 
 ## Dependencies
 - [Pytorch >=1.0](https://pytorch.org/get-started/locally/)
