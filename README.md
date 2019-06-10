@@ -27,6 +27,15 @@ To start curriculum training, specify the number of agents in `automate.py` file
 
 `python automate.py --env-name simple_spread --entity-mp --save-dir 0`
 
+## Results
+The models trained via curriculum learning on the three environments can be found in `models` subdirectory.
+
+The corresponding results obtained from the trained policies are located in `videos` subdirectory.
+
+You can also continue training on a saved model. For example, for training a team of 5 agents in `simple_spread` task from a policy trained with 3 agents, execute:
+
+`python main.py --env-name simple_spread --entity-mp --continue-training --load-dir models/ss/na3_uc.pt --num-agents 5`
+
 
 ## Contact
 For any queries, feel free to raise an issue or contact the authors at sumit.sks4@gmail.com or agarwalaks30@gmail.com.
