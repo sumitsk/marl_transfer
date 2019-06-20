@@ -5,6 +5,7 @@ import numpy as np
 import torch
 import utils
 import random
+from copy import deepcopy
 from arguments import get_args
 from tensorboardX import SummaryWriter
 from eval import evaluate
@@ -126,7 +127,7 @@ if __name__ == '__main__':
     pprint(vars(args))
     if not args.test:
         with open(os.path.join(args.save_dir, 'params.json'), 'w') as f:
-            params = utils.clean_dict(vars(args))
+            params = deepcopy(vars(args))
             params.pop('device')
             json.dump(params, f)
     train(args)
