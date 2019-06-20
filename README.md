@@ -1,29 +1,28 @@
 # Learning Transferable Cooperative Behavior in Multi-Agent Teams
 
-This is the official repository of the 'Learning Transferable Cooperative Behavior in Multi-Agent Teams' paper available at https://arxiv.org/abs/1906.01202. 
-
-## Dependencies
-- [Pytorch >=1.0](https://pytorch.org/get-started/locally/)
-- MultiAgentParticleEnv (included in this repo)
-- [gym_vecenv](https://github.com/agakshat/gym_vecenv)
-- [tensorboardX](https://github.com/lanpa/tensorboardX)
+This is the official repository of the 'Learning Transferable Cooperative Behavior in Multi-Agent Teams' paper available at https://arxiv.org/abs/1906.01202. This work has been presented at [Learning and Reasoning with Graph-Structured Reprsentations](https://graphreason.github.io/) workshop (https://graphreason.github.io/papers/29.pdf) at ICML, 2019. 
 
 ## Installation
-- Setup MAPE environment by running `pip install -e .` command inside the `mape` subdirectory.
-- Setup gym_vecenv by executing `pip install gym_vecenv`.
+See `requirements.txt` file for the list of dependencies. Create a virtualenv with python 3.5 and setup everything by executing `pip install -r requirements.txt`. 
 
 ## Examples
-See `arguments.py` file to see various command line arguments one can set while running scripts. 
+See `arguments.py` file for the list of various command line arguments one can set while running scripts. 
 
 ### Normal Training
-Training on a coverage control (`simple_spread`) environment can be started by running:
+Training on **Coverage Control** (`simple_spread`) environment can be started by running:
 
 `python main.py --env-name simple_spread --num-agents 3 --entity-mp --save-dir 0`
 
-Similarly scripts for formation control (`simple_formation`) and line control (`simple_line`) can be launched. 
+Similarly scripts for **Formation Control** (`simple_formation`) and **Line Control** (`simple_line`) can be launched as:
 
-### Curriculum training
-To start curriculum training, specify the number of agents in `automate.py` file and execute the script:
+`python main.py --env-name simple_formation --num-agents 3  --save-dir 0`
+
+`python main.py --env-name simple_line --num-agents 3  --save-dir 0`
+
+Specify the flag `--test` if you do not want to save anything. 
+
+### Curriculum Training
+To start curriculum training, specify the number of agents in `automate.py` file and execute:
 
 `python automate.py --env-name simple_spread --entity-mp --save-dir 0`
 
@@ -32,7 +31,8 @@ The models trained via curriculum learning on the three environments can be foun
 
 The corresponding results obtained from the trained policies are located in `videos` subdirectory.
 
-You can also continue training on a saved model. For example, for training a team of 5 agents in `simple_spread` task from a policy trained with 3 agents, execute:
+### Transfer 
+You can also continue training from a saved model. For example, for training a team of 5 agents in `simple_spread` task from a policy trained with 3 agents, execute:
 
 `python main.py --env-name simple_spread --entity-mp --continue-training --load-dir models/ss/na3_uc.pt --num-agents 5`
 
