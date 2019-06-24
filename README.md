@@ -1,9 +1,10 @@
 # Learning Transferable Cooperative Behavior in Multi-Agent Teams
 
 [Akshat Agarwal](https://agakshat.github.io)\*, [Sumit Kumar](https://sumitsk.github.io)\*, [Katia Sycara](http://www.cs.cmu.edu/~sycara/)
-Carnegie Mellon University
 
-This is the official repository of the 'Learning Transferable Cooperative Behavior in Multi-Agent Teams' paper, available at https://arxiv.org/abs/1906.01202 done with 
+Robotics Institute, Carnegie Mellon University
+
+This is the official repository of the 'Learning Transferable Cooperative Behavior in Multi-Agent Teams' paper, available at https://arxiv.org/abs/1906.01202
 
 This work has been presented at the [Learning and Reasoning with Graph-Structured Reprsentations](https://graphreason.github.io/) workshop (https://graphreason.github.io/papers/29.pdf) at ICML, 2019 held in Long Beach, USA. 
 
