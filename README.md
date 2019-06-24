@@ -1,6 +1,11 @@
 # Learning Transferable Cooperative Behavior in Multi-Agent Teams
 
-This is the official repository of the 'Learning Transferable Cooperative Behavior in Multi-Agent Teams' paper available at https://arxiv.org/abs/1906.01202. This work has been presented at [Learning and Reasoning with Graph-Structured Reprsentations](https://graphreason.github.io/) workshop (https://graphreason.github.io/papers/29.pdf) at ICML, 2019. 
+[Akshat Agarwal](https://agakshat.github.io)\*, [Sumit Kumar](https://sumitsk.github.io)\*, [Katia Sycara](http://www.cs.cmu.edu/~sycara/)
+Carnegie Mellon University
+
+This is the official repository of the 'Learning Transferable Cooperative Behavior in Multi-Agent Teams' paper, available at https://arxiv.org/abs/1906.01202 done with 
+
+This work has been presented at the [Learning and Reasoning with Graph-Structured Reprsentations](https://graphreason.github.io/) workshop (https://graphreason.github.io/papers/29.pdf) at ICML, 2019 held in Long Beach, USA. 
 
 ## Installation
 See `requirements.txt` file for the list of dependencies. Create a virtualenv with python 3.5 and setup everything by executing `pip install -r requirements.txt`. 
