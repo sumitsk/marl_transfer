@@ -6,7 +6,7 @@ gym==0.10.8
 -e git+https://github.com/agakshat/gym_vecenv.git@smac#egg=gym_vecenv
 idna==2.8
 -e git+https://github.com/sumitsk/marl_transfer@123a7431aa5eb085194d9d1b586c7eb01764c651#egg=multiagent&subdirectory=mape
-numpy==1.16.4
+numpy==1.22.0
 numpy-stl==2.10.1
 pkg-resources==0.0.0
 protobuf==3.8.0
