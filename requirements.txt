@@ -9,7 +9,7 @@ idna==2.8
 numpy==1.22.0
 numpy-stl==2.10.1
 pkg-resources==0.0.0
-protobuf==3.8.0
+protobuf==3.18.3
 pyglet==1.3.2
 python-utils==2.3.0
 requests==2.22.0
